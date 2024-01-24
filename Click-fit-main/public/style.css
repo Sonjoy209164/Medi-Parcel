@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 200px;
+}
+.btn11-primary {
+  background-color: orange;
+  border-color: white;
+}
+.btn12-primary {
+  background-color: rgb(57, 154, 228);
+  border-color: white;
+}
+.orange-border {
+  background-color: orange;
+  border: 6px solid white;
+  color: #fff; /* Ensure text is white for readability */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional for rounded corners */
+}
+
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* navbar styles */
+.shadow {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reflect {
+  position: relative;
+}
+
+.reflect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Adjust height for desired reflection size */
+  transform: scaleY(-1); /* Flip image vertically */
+  opacity: 0.5; /* Adjust opacity for fading effect */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.nav-transparent {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: calc(100% - 2rem);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+.menu-items {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.hover-effect::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-color: rgb(255, 193, 7);
+  transition: 0.5s;
+}
+
+.hover-effect:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.hover-effect:hover {
+  color: rgb(255, 193, 7) !important;
+}
+
+.active-link {
+  color: rgb(255, 193, 7) !important;
+}
+
+.active-link::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(1);
+  transform-origin: left;
+  background-color: rgb(255, 193, 7);
+  transition: 0.5s;
+}
+
+.navbar-scroll {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+  animation: scroll 0.6s 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+
+/* navbar styles */
+
+/* excercise card styles */
+
+#card {
+  border: 6px solid rgb(255, 193, 7);
+}
+
+/* excercise card styles */
+
+/* form styles */
+
+.transparent-input {
+  background-color: transparent !important;
+}
+
+.dropping-zone {
+  border: 2px dashed white !important;
+  width: 100%;
+}
+
+/* form styles */
+
+.quote-button {
+  font-weight: 900;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 999px;
+  transition: 200ms;
+}
+
+.quote-button:hover {
+  border-radius: 0;
+  box-shadow: rgb(255, 193, 7, .6) 2px 4px 10px 4px;
+}
+
+/* footer styles */
+
+#footer-menus > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* common styles */
+
+.bg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.responsive-banner {
+  min-height: 560px;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+/* common styles */
+body { /* just for this demo. */
+padding: 30px;
+}
+.btn { /* just for this demo. */
+    margin-top: 5px;
+}
+.btn-arrow-right,
+.btn-arrow-left {
+    position: relative;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.btn-arrow-right {
+    padding-left: 36px;
+}
+.btn-arrow-left {
+    padding-right: 36px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after,
+.btn-arrow-left:before,
+.btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    top: 5px; /* move it down because of rounded corners */
+    width: 22px; /* same as height */
+    height: 22px; /* button_outer_height / sqrt(2) */
+    background: inherit; /* use parent background */
+    border: inherit; /* use parent border */
+    border-left-color: transparent; /* hide left border */
+    border-bottom-color: transparent; /* hide bottom border */
+    border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px */
+    -webkit-border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+    transform: rotate(45deg); /* rotate right arrow squares 45 deg to point right */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.btn-arrow-left:before,
+.btn-arrow-left:after {
+    transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+}
+.btn-arrow-right:before,
+.btn-arrow-left:before { /* align the "before" square to the left */
+    left: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* align the "after" square to the right */
+    right: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:before { /* bring arrow pointers to front */
+    z-index: 1;
+}
+.btn-arrow-right:before,
+.btn-arrow-left:after { /* hide arrow tails background */
+    background-color: white;
+}
